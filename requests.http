@@ -1,4 +1,8 @@
+# breweries index
 GET http://localhost:3000/breweries
 
-###
+### breweries destroy
 DELETE http://localhost:3000/breweries/28
+
+### breweries show
+GET http://localhost:3000/breweries/29
