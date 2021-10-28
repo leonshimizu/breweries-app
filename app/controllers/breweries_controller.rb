@@ -1,5 +1,6 @@
 class BreweriesController < ApplicationController
   def index
-    render json: {message: "hello"}
+    brewery = Brewery.all
+    render json: brewery.as_json
   end
 end
