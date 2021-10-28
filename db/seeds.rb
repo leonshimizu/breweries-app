@@ -9,7 +9,20 @@
 link = HTTP.get("https://api.openbrewerydb.org/breweries")
 breweries_link = link.parse(:json)
 
-brewery = Brewery.new(
-  name: breweries_link[0]["name"], 
-  city: breweries_link[0]["city"], state: breweries_link[0]["state"], country: breweries_link[0]["country"])
-brewery.save
+# i = 0
+# 21.times do
+#   brewery = Brewery.new(
+#     name: breweries_link[i]["name"], 
+#     city: breweries_link[i]["city"], state: breweries_link[i]["state"], country: breweries_link[i]["country"])
+#   brewery.save
+#   i += 1
+# end
+
+i = 1
+5.times do
+  brewery = Brewery.new(
+        name: breweries_link[i]["name"], 
+        city: breweries_link[i]["city"], state: breweries_link[i]["state"], country: breweries_link[i]["country"])
+  brewery.save
+  i += 1
+end

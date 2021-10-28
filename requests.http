@@ -1,1 +1,4 @@
 GET http://localhost:3000/breweries
+
+###
+DELETE http://localhost:3000/breweries/28
