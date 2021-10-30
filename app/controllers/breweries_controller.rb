@@ -1,6 +1,6 @@
 class BreweriesController < ApplicationController
   def index
-    brewery = Brewery.all
+    brewery = Brewery.where(state: params[:state])
     render json: brewery.as_json
   end
 
