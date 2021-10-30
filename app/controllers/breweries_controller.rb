@@ -1,7 +1,12 @@
 class BreweriesController < ApplicationController
   def index
-    brewery = Brewery.where(state: params[:state])
-    render json: brewery.as_json
+    if params[:state]
+      brewery = Brewery.where(state: params[:state])
+      render json: brewery.as_json
+    else
+      brewery = Brewery.all 
+      render json: brewery.as_json
+    end
   end
 
   def destroy

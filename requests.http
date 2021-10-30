@@ -1,5 +1,5 @@
 # breweries index
-GET http://localhost:3000/breweries?state=california
+GET http://localhost:3000/breweries?state=washington
 
 ### breweries destroy
 DELETE http://localhost:3000/breweries/28
