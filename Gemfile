@@ -39,3 +39,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'http', '~> 5.0', '>= 5.0.4'
+
+gem 'rexml'
+gem 'geokit-rails', '~> 2.3', '>= 2.3.2'

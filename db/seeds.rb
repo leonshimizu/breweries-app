@@ -70,3 +70,18 @@ CSV.foreach(Rails.root.join('lib/seeds/breweries_us.csv'), headers: true) do |ro
     state: row['state']
   } ) 
 end
+
+# Steps to Complete 
+# - delete db
+# - create new db
+# - start with 1 location
+# - generate a migration to add lng lat 
+# - test geocoder conversions of address to lng lat 
+# - add geocoder conversion code to seeds file 
+# - run rails db:seed to test if the brewery will have the lng lat 
+# - run db:seed with all breweries (entire csv)
+# - Test geokit method of checking distance between two coordinates
+# - add geokit distance method to locations controller 
+# - from the geokit method, store distances and location id in an array of hashes
+# - sort the array from least to greatest and pull the first 5 distances and locations
+# - return those 5 distances and locations from the locations id to the user
